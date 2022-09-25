@@ -1,0 +1,30 @@
+* {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  margin: auto;
+  background-color: aqua;
+  width: 100%;
+  text-align: center;
+}
+.group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  background-color: antiquewhite;
+}
+.problem {
+  width: 22rem;
+  height: 22rem;
+}
+.footer {
+  text-align: center;
+}
