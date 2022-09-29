@@ -12,7 +12,7 @@
       console.log("Checkpoint 1");
         function demoFromHTML() {
             console.log("Checkpoint 2");
-            var pdf = new jsPDF('p', 'pt', 'a4');
+            var pdf = new jsPDF('l', 'pt', 'a4', true);
             // source can be HTML-formatted string, or a reference
             // to an actual DOM element from which the text will be scraped.
             source = document.getElementById('content');
@@ -29,10 +29,10 @@
                 }
             };
             margins = {
-                top: 80,
-                bottom: 60,
+                top: 40,
+                bottom: 80,
                 left: 40,
-                width: 900
+                width: 1000
             };
             // all coords and widths are in jsPDF instance's declared units
             // 'inches' in this case
@@ -45,9 +45,11 @@
                 },*/
 
                 pdf.addHTML(
-                source // HTML string or DOM elem ref.
-
-                ,
+                source, // HTML string or DOM elem ref.
+                margins.left, // x coord
+                margins.top, { // y coord
+                    'width': margins.width
+                },
 
     
                 function (dispose) {
