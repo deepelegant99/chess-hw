@@ -14,6 +14,13 @@ body {
   width: 100%;
   text-align: center;
 }
+
+#content{
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
 .group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
